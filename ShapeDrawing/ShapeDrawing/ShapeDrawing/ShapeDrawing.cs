@@ -85,4 +85,13 @@ public class ShapeDrawingForm : Form
 		foreach(Shape shape in shapes)
 			shape.Draw(e.Graphics);
 	}
+
+    private void drawShapes(IGraphics graphics)
+    {
+        foreach (Shape shape in shapes)
+        {
+            shape.setGraphics(graphics);
+            shape.Draw();
+        }
+    }
 }
