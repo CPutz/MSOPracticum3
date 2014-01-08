@@ -19,7 +19,7 @@ public class Star : Shape
 
 	public override void Draw ()
 	{
-        base.Draw();
+        /*base.Draw();
 
 		Pen pen = new Pen (Color.Black);
 
@@ -48,7 +48,7 @@ public class Star : Shape
                                 pts[(i+1) % numPoints].X,
                                 pts[(i+1) % numPoints].Y);
 		}
-		
+		*/
 	}
 }
 
