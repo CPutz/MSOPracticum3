@@ -15,7 +15,14 @@ namespace ShapeDrawing
 
         public void DrawPolyLine(Point[] points)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Black);
+
+            //assertion to ensure there are two points or more in the points array???
+
+            for (int i = 0; i < points.Length - 1; ++i)
+            {
+                this.canvas.DrawLine(pen, points[i], points[i + 1]);
+            }
         }
 
         public void DrawCircle(int x, int y, int size)
