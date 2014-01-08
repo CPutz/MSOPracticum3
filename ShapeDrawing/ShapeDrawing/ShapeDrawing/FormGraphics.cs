@@ -18,7 +18,7 @@ namespace ShapeDrawing
             throw new NotImplementedException();
         }
 
-        public void DrawCircle(int size)
+        public void DrawCircle(int x, int y, int size)
         {
             throw new NotImplementedException();
         }

@@ -6,6 +6,6 @@ namespace ShapeDrawing
     interface IGraphics
     {
         void DrawPolyLine(Point[] points);
-        void DrawCircle(int size);
+        void DrawCircle(int x, int y, int size);
     }
 }
