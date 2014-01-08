@@ -27,7 +27,8 @@ class Rectangle : Shape
             new Point(this.x, this.y), 
             new Point(this.x + this.width, this.y),
             new Point(this.x + this.width, this.y + this.height), 
-            new Point(this.x, this.y + this.height) 
+            new Point(this.x, this.y + this.height),
+            new Point(this.x, this.y)
         };
 
         this.graphics.DrawPolyLine(points);
