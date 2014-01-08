@@ -14,7 +14,10 @@ public abstract class Shape
         this.y = y;
 	}
 
-    public abstract void Draw(Graphics Canvas);
+    public virtual void Draw()
+    {
+        System.Diagnostics.Debug.Assert(this.graphics != null);
+    }
 
     public void setGraphics(IGraphics graphics)
     {

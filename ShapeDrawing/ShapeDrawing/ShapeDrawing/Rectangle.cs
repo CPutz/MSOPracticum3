@@ -18,8 +18,10 @@ class Rectangle : Shape
 		this.height = height;
     }
     
-	public override void Draw(Graphics Canvas)
+	public override void Draw()
     {
+        base.Draw();
+
 		Pen pen = new Pen(Color.Black);
 		Canvas.DrawLine(pen,x,y,x + width,y);
 		Canvas.DrawLine(pen,x+width,y,x+width,y+height);

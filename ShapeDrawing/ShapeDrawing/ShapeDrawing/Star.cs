@@ -17,8 +17,10 @@ public class Star : Shape
         this.height = height;
     }
 
-	public override void Draw (Graphics Canvas)
+	public override void Draw ()
 	{
+        base.Draw();
+
 		Pen pen = new Pen (Color.Black);
 
 		int numPoints = 5;
