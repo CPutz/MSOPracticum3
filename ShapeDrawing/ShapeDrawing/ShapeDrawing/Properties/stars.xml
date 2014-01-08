@@ -1,0 +1,5 @@
+<shapes>
+	<star x="50" y="50" width="30" height="30"/>
+	<star x="45" y="100" width="50" height="50"/>
+	<star x="150" y="100" width="75" height="75"/>
+</shapes>

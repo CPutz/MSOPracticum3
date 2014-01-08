@@ -1,0 +1,5 @@
+<shapes>
+	<circle x="45" y="100" size="50"/>
+	<circle x="150" y="100" size="25"/>
+	<circle x="50" y="50" size="30"/>
+</shapes>
