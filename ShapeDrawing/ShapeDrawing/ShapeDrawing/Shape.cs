@@ -6,6 +6,7 @@ public abstract class Shape
 
     protected int x;
     protected int y;
+    protected IGraphics graphics;
 
 	public Shape(int x, int y)
 	{
@@ -14,5 +15,9 @@ public abstract class Shape
 	}
 
     public abstract void Draw(Graphics Canvas);
-	
+
+    public void setGraphics(IGraphics graphics)
+    {
+        this.graphics = graphics;
+    }
 }
