@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="FormGraphics.cs" />
     <Compile Include="IGraphics.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Point.cs" />
