@@ -19,8 +19,7 @@ class Circle : Shape
     {
         base.Draw();
 
-		Pen pen = new Pen(Color.Black);
-        Canvas.DrawEllipse(pen, this.x, this.y, this.size, this.size);
+        this.graphics.DrawCircle(this.x, this.y, this.size);
     }
 
 }
