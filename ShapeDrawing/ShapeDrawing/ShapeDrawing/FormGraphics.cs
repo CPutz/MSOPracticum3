@@ -20,7 +20,8 @@ namespace ShapeDrawing
 
         public void DrawCircle(int x, int y, int size)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Black);
+            this.canvas.DrawEllipse(pen, x, y, size, size);
         }
     }
 }
