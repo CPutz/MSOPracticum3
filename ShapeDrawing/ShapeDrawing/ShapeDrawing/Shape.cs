@@ -4,8 +4,13 @@ using System.Drawing;
 public abstract class Shape
 {
 
-	public Shape()
+    protected int x;
+    protected int y;
+
+	public Shape(int x, int y)
 	{
+        this.x = x;
+        this.y = y;
 	}
 
     public abstract void Draw(Graphics Canvas);

@@ -7,18 +7,15 @@ using System.Text;
 public class Star : Shape
 {
 
-	private int x;
-	private int y;
 	private int width;
 	private int height;
 
-	public Star (int x, int y, int width, int height)
-	{
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
-	}
+    public Star(int x, int y, int width, int height)
+        : base(x, y)
+    {
+        this.width = width;
+        this.height = height;
+    }
 
 	public override void Draw (Graphics Canvas)
 	{
