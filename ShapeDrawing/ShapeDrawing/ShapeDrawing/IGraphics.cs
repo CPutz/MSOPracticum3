@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace ShapeDrawing
+public interface IGraphics
 {
-    interface IGraphics
-    {
-        void DrawPolyLine(Point[] points);
-        void DrawCircle(int x, int y, int size);
-    }
+    void DrawPolyLine(Point[] points);
+    void DrawCircle(int x, int y, int size);
 }

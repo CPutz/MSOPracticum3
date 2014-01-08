@@ -2,33 +2,30 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace ShapeDrawing
+class FormGraphics : IGraphics
 {
-    class FormGraphics : IGraphics
+    private Graphics canvas;
+
+    public FormGraphics(Graphics canvas)
     {
-        private Graphics canvas;
+        this.canvas = canvas;
+    }
 
-        public FormGraphics(Graphics canvas)
+    public void DrawPolyLine(Point[] points)
+    {
+        Pen pen = new Pen(Color.Black);
+
+        //assertion to ensure there are two points or more in the points array???
+
+        for (int i = 0; i < points.Length - 1; ++i)
         {
-            this.canvas = canvas;
+            this.canvas.DrawLine(pen, points[i], points[i + 1]);
         }
+    }
 
-        public void DrawPolyLine(Point[] points)
-        {
-            Pen pen = new Pen(Color.Black);
-
-            //assertion to ensure there are two points or more in the points array???
-
-            for (int i = 0; i < points.Length - 1; ++i)
-            {
-                this.canvas.DrawLine(pen, points[i], points[i + 1]);
-            }
-        }
-
-        public void DrawCircle(int x, int y, int size)
-        {
-            Pen pen = new Pen(Color.Black);
-            this.canvas.DrawEllipse(pen, x, y, size, size);
-        }
+    public void DrawCircle(int x, int y, int size)
+    {
+        Pen pen = new Pen(Color.Black);
+        this.canvas.DrawEllipse(pen, x, y, size, size);
     }
 }
