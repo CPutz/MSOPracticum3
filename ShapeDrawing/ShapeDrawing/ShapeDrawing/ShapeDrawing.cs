@@ -81,11 +81,12 @@ public class ShapeDrawingForm : Form
 
     private void OnPaint(object sender, PaintEventArgs e)
 	{
-		// Draw all the shapes
-		foreach(Shape shape in shapes)
-			shape.Draw(e.Graphics);
+        IGraphics graphics = new FormGraphics(e.Graphics);
+
+        drawShapes(graphics);
 	}
 
+    // Draw all the shapes on the graphics object
     private void drawShapes(IGraphics graphics)
     {
         foreach (Shape shape in shapes)
