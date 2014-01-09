@@ -61,10 +61,12 @@ class SVGGraphics : IGraphics
 
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
+            float radius = (float)size / 2;
+
             writer.WriteLine(
-                "<circle cx=\"" + x + 
-                "\" cy=\"" + y + 
-                "\" r=\"" + ((float)size / 2).ToString(System.Globalization.CultureInfo.InvariantCulture) + 
+                "<circle cx=\"" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "\" cy=\"" + ((float)y + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) + 
+                "\" r=\"" + radius.ToString(System.Globalization.CultureInfo.InvariantCulture) + 
                 "\" stroke-width=\"1\" fill=\"none\" stroke=\"black\" />");
         }
     }
