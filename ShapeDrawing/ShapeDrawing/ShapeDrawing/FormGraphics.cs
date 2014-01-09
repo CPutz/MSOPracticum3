@@ -11,6 +11,18 @@ class FormGraphics : IGraphics
         this.canvas = canvas;
     }
 
+
+    public void Begin()
+    {
+        //do nothing
+    }
+
+    public void End()
+    {
+        //do nothing
+    }
+
+
     public void DrawPolyLine(Point[] points)
     {
         Pen pen = new Pen(Color.Black);

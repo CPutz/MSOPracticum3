@@ -6,4 +6,6 @@ public interface IGraphics
 {
     void DrawPolyLine(Point[] points);
     void DrawCircle(int x, int y, int size);
+    void Begin();
+    void End();
 }
