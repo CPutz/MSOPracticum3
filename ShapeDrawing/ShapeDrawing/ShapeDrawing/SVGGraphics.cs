@@ -52,7 +52,7 @@ class SVGGraphics : IGraphics
                 }
             }
 
-            writer.Write("\" style=\"fill:none;stroke:black;stroke-width:1\" />\n");
+            writer.WriteLine("\" style=\"fill:none;stroke:black;stroke-width:1\" />");
         }
     }
 
