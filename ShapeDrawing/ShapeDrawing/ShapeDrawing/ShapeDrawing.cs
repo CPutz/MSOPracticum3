@@ -61,21 +61,24 @@ public class ShapeDrawingForm : Form
 		Stream stream;
 		SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-		saveFileDialog.Filter = "TeX files|(*.tex)";
+		saveFileDialog.Filter = "SVG image|(*.svg)";
 		saveFileDialog.RestoreDirectory = true;
 		
 		if(saveFileDialog.ShowDialog() == DialogResult.OK)
 		{
-			if((stream = saveFileDialog.OpenFile()) != null)
-			{
-				// Insert code here that generates the string of LaTeX
-                //   commands to draw the shapes
-                using(StreamWriter writer = new StreamWriter(stream))
-                {
-                        // Write strings to the file here using:
-                        //   writer.WriteLine("Hello World!");
-                }				
-			}
+            IGraphics graphics;
+
+            switch (saveFileDialog.FilterIndex)
+            {
+                case 1:
+                    graphics = new SVGGraphics(saveFileDialog.FileName);
+                    break;
+                default:
+                    graphics = null;
+                    break;
+            }
+
+            this.drawShapes(graphics);
 		}
 	}
 
@@ -83,7 +86,7 @@ public class ShapeDrawingForm : Form
 	{
         IGraphics graphics = new FormGraphics(e.Graphics);
 
-        drawShapes(graphics);
+        this.drawShapes(graphics);
 	}
 
     // Draw all the shapes on the graphics object
