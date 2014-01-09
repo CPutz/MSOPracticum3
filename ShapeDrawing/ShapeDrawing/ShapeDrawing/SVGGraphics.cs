@@ -47,7 +47,7 @@ class SVGGraphics : IGraphics
             writer.WriteLine(
                 "<circle cx=\"" + x + 
                 "\" cy=\"" + y + 
-                "\" r=\"" + size + 
+                "\" r=\"" + ((float)size / 2).ToString(System.Globalization.CultureInfo.InvariantCulture) + 
                 "\" stroke-width=\"1\" fill=\"none\" stroke=\"black\" />");
         }
     }
