@@ -92,10 +92,14 @@ public class ShapeDrawingForm : Form
     // Draw all the shapes on the graphics object
     private void drawShapes(IGraphics graphics)
     {
+        graphics.Begin();
+
         foreach (Shape shape in shapes)
         {
             shape.setGraphics(graphics);
             shape.Draw();
         }
+
+        graphics.End();
     }
 }
