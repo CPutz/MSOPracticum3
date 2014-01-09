@@ -39,7 +39,7 @@ class SVGGraphics : IGraphics
 
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
-            writer.Write("<polyline points=\"");
+            writer.Write("\t<polyline points=\"");
 
             for (int i = 0; i < points.Length; ++i)
             {
@@ -64,7 +64,7 @@ class SVGGraphics : IGraphics
             float radius = (float)size / 2;
 
             writer.WriteLine(
-                "<circle cx=\"" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "\t<circle cx=\"" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
                 "\" cy=\"" + ((float)y + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) + 
                 "\" r=\"" + radius.ToString(System.Globalization.CultureInfo.InvariantCulture) + 
                 "\" stroke-width=\"1\" fill=\"none\" stroke=\"black\" />");
