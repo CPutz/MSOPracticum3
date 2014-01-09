@@ -39,20 +39,20 @@ class SVGGraphics : IGraphics
 
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
-            writer.WriteLine("<polyline points=\"");
+            writer.Write("<polyline points=\"");
 
             for (int i = 0; i < points.Length; ++i)
             {
-                writer.WriteLine(points[i].X + "," + points[i].Y);
+                writer.Write(points[i].X + "," + points[i].Y);
 
                 //after every pair of points we need to add a space, except the last pair.
                 if (i < points.Length - 1)
                 {
-                    writer.WriteLine(" ");
+                    writer.Write(" ");
                 }
             }
 
-            writer.WriteLine("\" style=\"fill:none;stroke:black;stroke-width:1\"");
+            writer.Write("\" style=\"fill:none;stroke:black;stroke-width:1\" />\n");
         }
     }
 
