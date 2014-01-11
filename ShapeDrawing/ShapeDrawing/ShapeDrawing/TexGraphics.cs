@@ -20,7 +20,7 @@ class TexGraphics : IGraphics
 
         using (StreamWriter writer = new StreamWriter(this.filename, false))
         {
-            writer.WriteLine("\begin{tikzpicture}");
+            writer.WriteLine("\\begin{tikzpicture}");
         }
     }
 
@@ -41,16 +41,16 @@ class TexGraphics : IGraphics
 
             for (int i = 0; i < points.Length; ++i)
             {
-                writer.Write("(" + points[i].X + "," + points[i].Y + ")");
+                writer.Write("(" + points[i].X + "pt," + -points[i].Y + "pt)");
 
                 //after every pair of points we need to add " -- ", except the last pair.
                 if (i < points.Length - 1)
                 {
                     writer.Write(" -- ");
                 }
-
-                writer.WriteLine(";");
             }
+
+            writer.WriteLine(";");
         }
     }
 
@@ -58,7 +58,12 @@ class TexGraphics : IGraphics
     {
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
-            writer.WriteLine("  \\draw (" + x + "," + y + ") circle (" + size + "pt);");
+            float radius = (float)size / 2;
+            writer.WriteLine(
+                "  \\draw (" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "pt," + (-(float)y - radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "pt) circle (" + radius.ToString(System.Globalization.CultureInfo.InvariantCulture) + 
+                "pt);");
         }
     }
 
