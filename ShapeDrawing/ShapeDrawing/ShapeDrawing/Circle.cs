@@ -9,8 +9,8 @@ class Circle : Shape
 
 	private int size;
 
-    public Circle(int x, int y, int size)
-        : base(x, y)
+    public Circle(int x, int y, int size, Color color)
+        : base(x, y, color)
     {
         this.size = size;
     }

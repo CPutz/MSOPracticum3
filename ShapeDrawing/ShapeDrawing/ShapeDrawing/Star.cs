@@ -10,8 +10,8 @@ public class Star : Shape
 	private int width;
 	private int height;
 
-    public Star(int x, int y, int width, int height)
-        : base(x, y)
+    public Star(int x, int y, int width, int height, Color color)
+        : base(x, y, color)
     {
         this.width = width;
         this.height = height;
