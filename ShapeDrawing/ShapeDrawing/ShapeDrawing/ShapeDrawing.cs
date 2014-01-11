@@ -61,7 +61,7 @@ public class ShapeDrawingForm : Form
 		Stream stream;
 		SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-		saveFileDialog.Filter = "SVG image|*.svg";
+        saveFileDialog.Filter = "SVG image|*.svg|TeX file|*.tex";
 		saveFileDialog.RestoreDirectory = true;
 		
 		if(saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -72,6 +72,9 @@ public class ShapeDrawingForm : Form
             {
                 case 1:
                     graphics = new SVGGraphics(saveFileDialog.FileName);
+                    break;
+                case 2:
+                    graphics = new TexGraphics(saveFileDialog.FileName);
                     break;
                 default:
                     graphics = null;
