@@ -23,9 +23,9 @@ class FormGraphics : IGraphics
     }
 
 
-    public void DrawPolyLine(Point[] points)
+    public void DrawPolyLine(Point[] points, Color color)
     {
-        Pen pen = new Pen(Color.Black);
+        Pen pen = new Pen(color);
 
         //assertion to ensure there are two points or more in the points array???
 
@@ -35,9 +35,9 @@ class FormGraphics : IGraphics
         }
     }
 
-    public void DrawCircle(int x, int y, int size)
+    public void DrawCircle(int x, int y, int size, Color color)
     {
-        Pen pen = new Pen(Color.Black);
+        Pen pen = new Pen(color);
         this.canvas.DrawEllipse(pen, x, y, size, size);
     }
 }

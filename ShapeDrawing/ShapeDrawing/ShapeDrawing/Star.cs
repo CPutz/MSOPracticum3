@@ -42,7 +42,7 @@ public class Star : Shape
 		}
 
 
-        this.graphics.DrawPolyLine(pts);
+        this.graphics.DrawPolyLine(pts, this.color);
 	}
 }
 

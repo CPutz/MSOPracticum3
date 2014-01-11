@@ -19,7 +19,7 @@ class Circle : Shape
     {
         base.Draw();
 
-        this.graphics.DrawCircle(this.x, this.y, this.size);
+        this.graphics.DrawCircle(this.x, this.y, this.size, this.color);
     }
 
 }

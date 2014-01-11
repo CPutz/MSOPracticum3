@@ -33,7 +33,7 @@ class TexGraphics : IGraphics
     }
 
 
-    public void DrawPolyLine(Point[] points)
+    public void DrawPolyLine(Point[] points, Color color)
     {
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
@@ -54,7 +54,7 @@ class TexGraphics : IGraphics
         }
     }
 
-    public void DrawCircle(int x, int y, int size)
+    public void DrawCircle(int x, int y, int size, Color color)
     {
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {

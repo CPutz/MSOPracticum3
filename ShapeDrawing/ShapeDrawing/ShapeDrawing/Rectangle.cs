@@ -31,7 +31,7 @@ class Rectangle : Shape
             new Point(this.x, this.y)
         };
 
-        this.graphics.DrawPolyLine(points);
+        this.graphics.DrawPolyLine(points, this.color);
     }
 }
 
