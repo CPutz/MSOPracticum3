@@ -37,7 +37,7 @@ class TexGraphics : IGraphics
     {
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
-            writer.WriteLine("  \\definecolor{TikZcolor}{HTML}{" + ColorTranslator.ToHtml(color).Replace("#", "") + "}");
+            writer.WriteLine("  \\definecolor{TikZcolor}{HTML}{" + ColorConverter.ColorToHex(color) + "}");
             writer.Write("  \\draw[TikZcolor] ");
 
             for (int i = 0; i < points.Length; ++i)
@@ -59,7 +59,7 @@ class TexGraphics : IGraphics
     {
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
-            writer.WriteLine("  \\definecolor{TikZcolor}{HTML}{" + ColorTranslator.ToHtml(color).Replace("#", "") + "}");
+            writer.WriteLine("  \\definecolor{TikZcolor}{HTML}{" + ColorConverter.ColorToHex(color) + "}");
 
             float radius = (float)size / 2;
             writer.WriteLine(
