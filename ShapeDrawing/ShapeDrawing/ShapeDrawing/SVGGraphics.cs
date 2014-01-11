@@ -54,7 +54,7 @@ class SVGGraphics : IGraphics
                 }
             }
 
-            writer.WriteLine("\" style=\"fill:none;stroke:black;stroke-width:1\" />");
+            writer.WriteLine("\" style=\"fill:none;stroke:" + ColorTranslator.ToHtml(color) + ";stroke-width:1\" />");
         }
     }
 
@@ -69,7 +69,7 @@ class SVGGraphics : IGraphics
                 "  <circle cx=\"" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
                 "\" cy=\"" + ((float)y + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) + 
                 "\" r=\"" + radius.ToString(System.Globalization.CultureInfo.InvariantCulture) + 
-                "\" stroke-width=\"1\" fill=\"none\" stroke=\"black\" />");
+                "\" stroke-width=\"1\" fill=\"none\" stroke=\"" + ColorTranslator.ToHtml(color) + "\" />");
         }
     }
 }

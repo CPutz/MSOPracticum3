@@ -39,6 +39,7 @@ public class Parser
 
                     if (shape.Attributes["color"] != null)
                         color = ColorTranslator.FromHtml(shape.Attributes["color"].Value);
+
                     shapes.Add(new Circle(x, y, size, color));
                     break;
 				case "star":
