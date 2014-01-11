@@ -14,9 +14,10 @@ class SVGGraphics : IGraphics
     }
 
 
-    public void Begin() {
-        
-        using (StreamWriter writer = new StreamWriter(this.filename, false))
+    public void Begin()
+    {
+
+        using (StreamWriter writer = new StreamWriter(this.filename))
         {
             writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?>");
             writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"");
@@ -25,9 +26,10 @@ class SVGGraphics : IGraphics
         }
     }
 
-    public void End() {
-        
-        using (StreamWriter writer = new StreamWriter(this.filename, true))
+    public void End()
+    {
+
+        using (StreamWriter writer = new StreamWriter(this.filename))
         {
             writer.WriteLine("</svg>");
         }
@@ -37,7 +39,7 @@ class SVGGraphics : IGraphics
     public void DrawPolyLine(Point[] points)
     {
 
-        using (StreamWriter writer = new StreamWriter(this.filename, true))
+        using (StreamWriter writer = new StreamWriter(this.filename))
         {
             writer.Write("  <polyline points=\"");
 
@@ -59,7 +61,7 @@ class SVGGraphics : IGraphics
     public void DrawCircle(int x, int y, int size)
     {
 
-        using (StreamWriter writer = new StreamWriter(this.filename, true))
+        using (StreamWriter writer = new StreamWriter(this.filename))
         {
             float radius = (float)size / 2;
 
