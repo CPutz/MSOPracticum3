@@ -28,7 +28,7 @@ public class Parser
 					height = int.Parse(shape.Attributes["height"].Value);
 
                     if (shape.Attributes["color"] != null)
-                        color = ColorTranslator.FromHtml(shape.Attributes["Color"].Value);
+                        color = ColorTranslator.FromHtml(shape.Attributes["color"].Value);
 
                     shapes.Add(new Rectangle(x, y, width, height, color));
                     break;
@@ -38,8 +38,7 @@ public class Parser
 					int size = int.Parse(shape.Attributes["size"].Value);
 
                     if (shape.Attributes["color"] != null)
-                        color = ColorTranslator.FromHtml(shape.Attributes["Color"].Value);
-
+                        color = ColorTranslator.FromHtml(shape.Attributes["color"].Value);
                     shapes.Add(new Circle(x, y, size, color));
                     break;
 				case "star":
@@ -49,7 +48,7 @@ public class Parser
 					height = int.Parse(shape.Attributes["height"].Value);
 
                     if (shape.Attributes["color"] != null)
-                        color = ColorTranslator.FromHtml(shape.Attributes["Color"].Value);
+                        color = ColorTranslator.FromHtml(shape.Attributes["color"].Value);
 
 					shapes.Add (new Star(x,y,width,height, color));
 					break;
