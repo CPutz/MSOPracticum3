@@ -63,16 +63,10 @@ class TexGraphics : IGraphics
 
             float radius = (float)size / 2;
             writer.WriteLine(
-                "  \\draw[TikZcolor] (" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
-                "pt," + (-(float)y - radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
-                "pt) circle (" + radius.ToString(System.Globalization.CultureInfo.InvariantCulture) + 
+                "  \\draw[TikZcolor] (" + ((float)x + radius).ToString() +
+                "pt," + (-(float)y - radius).ToString() +
+                "pt) circle (" + radius.ToString() + 
                 "pt);");
         }
     }
-
-/*\begin{tikzpicture}
-\draw (-1.5,0) -- (1.5,0);
-\draw (0,-1.5) -- (0,1.5);
-\draw (0,0) circle (1cm);
-\end{tikzpicture}*/
 }

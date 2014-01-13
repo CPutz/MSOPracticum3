@@ -15,6 +15,7 @@ namespace ShapeDrawing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
             Application.Run(new ShapeDrawingForm());
         }
     }

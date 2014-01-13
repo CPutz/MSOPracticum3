@@ -66,9 +66,9 @@ class SVGGraphics : IGraphics
             float radius = (float)size / 2;
 
             writer.WriteLine(
-                "  <circle cx=\"" + ((float)x + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) +
-                "\" cy=\"" + ((float)y + radius).ToString(System.Globalization.CultureInfo.InvariantCulture) + 
-                "\" r=\"" + radius.ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "  <circle cx=\"" + ((float)x + radius).ToString() +
+                "\" cy=\"" + ((float)y + radius).ToString() + 
+                "\" r=\"" + radius.ToString() +
                 "\" stroke-width=\"1\" fill=\"none\" stroke=\"#" + ColorConverter.ColorToHex(color) + "\" />");
         }
     }
