@@ -20,6 +20,9 @@ class TexGraphics : IGraphics
 
         using (StreamWriter writer = new StreamWriter(this.filename, false))
         {
+            writer.WriteLine("\\documentclass{article}");
+            writer.WriteLine("\\usepackage{tikz}");
+            writer.WriteLine("\\begin{document}");
             writer.WriteLine("\\begin{tikzpicture}");
         }
     }
@@ -29,6 +32,7 @@ class TexGraphics : IGraphics
         using (StreamWriter writer = new StreamWriter(this.filename, true))
         {
             writer.WriteLine("\\end{tikzpicture}");
+            writer.WriteLine("\\end{document}");
         }
     }
 

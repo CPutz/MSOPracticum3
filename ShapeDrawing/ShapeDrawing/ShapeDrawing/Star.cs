@@ -23,7 +23,7 @@ public class Star : Shape
 
 		Pen pen = new Pen (Color.Black);
 
-		int numPoints = 3;
+		int numPoints = 5;
 		Point[] pts = new Point[numPoints + 1];
 		double rx = width / 2;
 		double ry = height / 2;
@@ -31,7 +31,7 @@ public class Star : Shape
 		double cy = y + ry;
 
 		double theta = -Math.PI / 2;
-		double dtheta = 2 * Math.PI / numPoints;
+		double dtheta = 4 * Math.PI / numPoints;
 		int i;
 		for (i = 0; i < numPoints + 1; i++) 
 		{
