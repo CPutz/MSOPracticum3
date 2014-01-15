@@ -55,10 +55,9 @@ public class ShapeDrawingForm : Form
 
     }
 
-    // What to do when the user wants to export a TeX file
+    // What to do when the user wants to export a SVG or TeX file
 	private void exportHandler (object sender, EventArgs e)
 	{
-		Stream stream;
 		SaveFileDialog saveFileDialog = new SaveFileDialog();
 
         saveFileDialog.Filter = "SVG image|*.svg|TeX file|*.tex";
@@ -92,7 +91,7 @@ public class ShapeDrawingForm : Form
         this.drawShapes(graphics);
 	}
 
-    // Draw all the shapes on the graphics object
+    // Draw all the shapes on the provided graphics object
     private void drawShapes(IGraphics graphics)
     {
         graphics.Begin();
