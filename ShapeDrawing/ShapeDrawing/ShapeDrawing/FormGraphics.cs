@@ -24,9 +24,10 @@ class FormGraphics : IGraphics
 
     public void DrawPolyLine(Point[] points, Color color)
     {
-        Pen pen = new Pen(color);
+        //polylines with fewer than 2 points are invalid
+        System.Diagnostics.Debug.Assert(points.Length >= 2);
 
-        //assertion to ensure there are two points or more in the points array???
+        Pen pen = new Pen(color);
 
         for (int i = 0; i < points.Length - 1; ++i)
         {

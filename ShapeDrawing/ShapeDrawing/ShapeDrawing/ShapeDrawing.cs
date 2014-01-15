@@ -76,7 +76,7 @@ public class ShapeDrawingForm : Form
                     graphics = new TexGraphics(saveFileDialog.FileName);
                     break;
                 default:
-                    graphics = null;
+                    throw new Exception("savefiledialog filterindex: " + saveFileDialog.FilterIndex + " not supported");
                     break;
             }
 
